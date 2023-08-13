@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import "./styles/app.scss"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
+import Home from './component/Home'
+import Header from './component/Header'
+import Cart from './component/Cart'
+import Footer from './component/Footer'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/cart' element={<Cart />} />
+      </Routes>
+      <Toaster />
+      <Footer />
+    </Router>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,55 @@
+@import "colors";
+
+nav {
+    background-color: $secondary;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+
+    >h2 {
+        text-transform: capitalize;
+        color: $primary;
+        display: flex;
+        flex-direction: row;
+
+        svg {
+            color: $primary;
+            margin-top: .5rem;
+        }
+
+        p {
+            text-transform: capitalize;
+            color: $primary;
+        }
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+
+        >a {
+            color: $primary;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+            transition: all 0.3s;
+
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            >p {
+                position: absolute;
+                background-color: $primary;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                font: 900 0.7rem 'Playfair Display';
+                display: grid;
+                place-items: center;
+                transform: translate(80%, -70%);
+            }
+        }
+    }
+}
