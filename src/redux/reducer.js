@@ -38,9 +38,11 @@ export const cartReducer = createReducer(
             let sum = 0;
             state.cartItems.forEach((i) => (sum += i.price * i.quantity));
             state.subTotal = sum;
-            state.shipping = state.subTotal > 1500 ? 0 : 200;
-            state.tax = +(state.subTotal * 0.18).toFixed();
+            state.shipping = state.subTotal > 2500 ? 0 : 200;
+            if (state.cartItems.length == 0) state.shipping = 0;
+            state.tax = +(state.subTotal * 0.21).toFixed();
             state.total = state.subTotal + state.tax + state.shipping;
+
         },
     }
 );

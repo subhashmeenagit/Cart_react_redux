@@ -14,7 +14,8 @@ import w4 from '../assets/w4.jpg'
 import { toast } from 'react-hot-toast'
 import { useDispatch } from 'react-redux'
 
-
+//dispatch update krta hai redux state ko
+// kul mila ke bat ye hai ki ye data bhejega redux me
 const products = [
     {
         name: 'apple mac pro12',
@@ -97,8 +98,7 @@ const Home = () => {
     const addToCart = (options) => {
         dispatch({ type: "addToCart", payload: options });
         dispatch({ type: "calculatePrice" });
-        toast.success('Added in bag')
-
+        toast.success('Added in bag successfully !')
     }
 
 

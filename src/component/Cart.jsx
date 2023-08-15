@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiFillDelete, } from 'react-icons/ai'
-//import pic1 from '../assets/pic1.jpg'
+import { toast } from 'react-hot-toast'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Cart = () => {
@@ -58,17 +58,17 @@ const Cart = () => {
                     ) : (
                         <>
                             <h1> O...o.. No Item Added Yet !</h1>
-
+                            <br />
                             <h1> Add Items in Your Bag :)</h1></>
                     )}
             </main>
 
-            <aside>
+            <div>
                 <h2>Subtotal: ${subTotal}</h2>
                 <h2>Shipping: ${shipping}</h2>
                 <h2>Tax: ${tax}</h2>
                 <h2>Total: ${total}</h2>
-            </aside>
+            </div>
 
         </div>
     )
@@ -98,7 +98,11 @@ const CartItem = ({
             <button onClick={() => increment(id)} >+ </button>
         </div>
 
-        <AiFillDelete onClick={() => deleteHandler(id)} className='deletbut' />
+        <AiFillDelete onClick={() => {
+            deleteHandler(id)
+            toast.success('Item-deleted from bag :(')
+        }
+        } className='deletbut' />
 
     </div>
 )

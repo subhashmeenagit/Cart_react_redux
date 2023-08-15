@@ -22,7 +22,7 @@ const Footer = () => {
                         textTransform={'capitalize'}
                         color={'rgb(29, 29, 29)'}
                     >
-                        we will provide you best service
+                        we will provide you best Shoping Items.
                     </Heading>
                     <HStack
                         borderBottom={'2px solid white'} py={'2'}>
@@ -52,7 +52,7 @@ const Footer = () => {
                         color={'rgb(29, 29, 29)'}>
                         Amazon
                     </Heading>
-                    <Text color={'rgb(29, 29, 29)'}> All rights reserved. </Text>
+                    <Text color={'rgb(29, 29, 29)'}> @All rights reserved. </Text>
                 </VStack>
                 <VStack w={'full'}
 
@@ -61,7 +61,7 @@ const Footer = () => {
 
                     <Heading size={'md'} textTransform={'capitalize'} color={'rgb(29, 29, 29)'}> social media</Heading>
                     <Button variant={'link'} color={'rgb(29, 29, 29)'}>
-                        <AiFillYoutube />
+                        <AiFillYoutube css={{ margin: "0 2rem" }} />
                         <a href='https://youtube.com/' color={'rgb(29, 29, 29)'}> Youtube</a>
                     </Button>
                     <Button variant={'link'} color={'rgb(29, 29, 29)'}>

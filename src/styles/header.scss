@@ -5,7 +5,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
-
+    position: fixed;
+    width: 100%;
+    top: 0;
 
     >h2 {
         text-transform: capitalize;

@@ -16,6 +16,7 @@
     padding: 3rem;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .productCart {
@@ -24,7 +25,7 @@
     margin: 2rem;
     border-radius: 15px;
     padding: 2rem;
-    transition: all .6s;
+    transition: all .8s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +33,7 @@
 
     &:hover {
         transform: scale(1.05);
-        background-color: rgb(188, 235, 188);
+        background-color: rgb(238, 255, 238);
     }
 
     img {
@@ -40,6 +41,7 @@
         height: 100%;
         object-fit: cover;
         color: $primary;
+        border-radius: 5px;
     }
 
     h4 {
@@ -64,6 +66,7 @@
 
         &:hover {
             background-color: $secondarydark;
+            transform: scale(0.9);
         }
     }
 
